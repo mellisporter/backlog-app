@@ -73,6 +73,14 @@ app.post("/games" , function(req, res){
 
 // Edit
 
+app.get("/games/:id/edit", function (req, res){
+    Games.findById(req.params.id, function (err, foundGame){
+        res.render("edit.ejs" , {
+            game: foundGame,
+        })
+    })
+})
+
 // Show
 
 app.get("/games/:id", function (req, res){
