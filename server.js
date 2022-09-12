@@ -11,7 +11,13 @@ let port = process.env.port
 
 // CONTROLLERS
 
+// SEED
+
 // Index
+
+app.get("/games" , function(req, res){
+    res.render("index.ejs")
+})
 
 // New
 
@@ -25,8 +31,10 @@ let port = process.env.port
 
 // Show
 
+app.get("")
+
 // Listener
 
 app.listen(port, function(){
-    console.log(port)
+    console.log("Ready to game on Port " + port)
 })
