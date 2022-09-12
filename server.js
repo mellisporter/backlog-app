@@ -50,11 +50,22 @@ app.get("/games/new" , function(req, res){
 
 // Delete
 
+app.delete("/games/:id", function (req, res){
+    Games.findByIdAndRemove(req.params.id, function (err, data) {
+        res.redirect("/games")
+    })
+})
+
 // Update
 
 // Create
 
 app.post("/games" , function(req, res){
+    if (req.body.hasBeaten === "on") {
+        req.body.hasBeaten = true;
+    } else {
+        req.body.hasBeaten = false;
+    }
     Games.create(req.body, function(error, createdGame){
         res.redirect("/games")
     })
