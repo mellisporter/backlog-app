@@ -20,6 +20,11 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // MIDDLEWARE
 
+app.use(express.urlencoded({ extended: false })); // gives access to req.body
+app.use(methodOverride('_method')); // allows us to use methods other than get and post
+app.use(express.static('public')); // can use public folder for CSS
+
+
 // CONTROLLERS
 
 // SEED
