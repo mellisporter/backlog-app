@@ -1,7 +1,9 @@
 /* body {
     background-color: black;
 } */
-
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
 nav {
     background-color: black;
     color: white;
