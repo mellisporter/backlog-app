@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(60, 59, 59);
+    /* background-color: rgb(60, 59, 59); */
 }
 
 h1, li, a, button {
@@ -16,6 +16,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px, 10px;
+    margin-bottom: 20px;
+    background-color: black;
 }
 
 .logo {
@@ -50,4 +52,38 @@ button {
 
 button:hover {
     background-color: rgba(0, 136, 169, 0.8);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
+    background-color: pink;
+}
+
+/* index css */
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+body a {
+    color: black;
+}
+
+body button a {
+    color: white;
+}
+
+/* .collection {
+    display: flex;
+    flex-direction: row;
+} */
+
+
+.boxart {
+    max-height: 10px;
+    max-width: 10px;
 }

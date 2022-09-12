@@ -6,34 +6,29 @@
 
 <body>
     <header>
-        <h1>Back.log</h1>
-        <nav>
-            <ul class="nav-links">
-            <li>
-                <a href="">About</a>
-            </li>  
-            <li>
-                <a href="">My Games</a>
-            </li>  
-            <li>
-                <a href="">My Consoles</a>
-            </li>
-            </ul>
-           
-        </nav>
-        <a href="" class="cta"><button>Sign Up</button></a>
+        <%- include('../partials/header.ejs')%>
+
         <!-- <h1>Backlog</h1>
         
         <h2>Sign In</h2> -->
     </header>
-<div class="collection">
-    <h2>Welcome Back! Here's your collection.</h2>
-    <h2><a href="/games/new">Add Game</a></h2>
+    <main>
+
+    <div class="welcome">
+        <h2>Welcome Back! Here's your collection.</h2>
+    <button><a href="/games/new">Add Game</a></button>
+    </div>
+    <div class="collection"></div>
     <ul>
     <% for (let i = 0; i < games.length; i++) { %>
+        <div class="gamecard">
+
 <li>
     <a href="/games/<%=games[i]._id%>"><%= games[i].title %></a><br>
-    <img src="<%=games[i].coverURL%>" alt=""><br>
+    <div class="art">
+        <a href="/games/<%=games[i]._id%>" class="boxart"><img src="<%=games[i].coverURL%>" alt=""></a>
+    </div>
+    <br>
     <form action="/games/<%=games[i]._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE">
     </form>
@@ -45,5 +40,10 @@
     <% } %> 
     </ul>
 </div>
+</div>
+</main>
+<footer>
+    Color Themes Here
+</footer>
 </body>
 </html>
