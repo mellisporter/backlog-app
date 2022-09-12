@@ -64,6 +64,13 @@ app.post("/games" , function(req, res){
 
 // Show
 
+app.get("/games/:id", function (req, res){
+    Games.findById(req.params.id, function (err, foundGame){
+        res.render("show.ejs", {
+            game: foundGame,
+        })
+    })
+})
 // Listener
 
 app.listen(port, function(){

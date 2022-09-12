@@ -20,7 +20,8 @@
     <% for (let i = 0; i < games.length; i++) { %>
 <li>
     <a href="/games/<%=games[i]._id%>"><%= games[i].title %></a><br>
-    <img src="<%=games[i].coverURL%>" alt="">
+    <img src="<%=games[i].coverURL%>" alt=""><br>
+    <button>Delete</button>
 </li>
     <% } %> 
     </ul>
