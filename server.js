@@ -5,7 +5,7 @@ require('dotenv').config();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const Games = require("./models/games")
-
+const gamesController = require('./controllers/games.js');
 
 // DOTENV VARIABLES
 let port = process.env.port;
@@ -26,78 +26,83 @@ app.use(express.urlencoded({ extended: false })); // gives access to req.body
 app.use(methodOverride('_method')); // allows us to use methods other than get and post
 app.use(express.static('public')); // can use public folder for CSS
 
-
+app.use('/games', gamesController);
 // CONTROLLERS
+
+
+app.get("/" , function (req, res){
+    res.render('index.ejs')
+})
 
 // GAME SEED
 // CONSOLE SEED
 
-// Index
+// // Index
 
-app.get("/games" , function(req, res){
-    Games.find({}, (error, allGames) => {
-        res.render("index.ejs" , {
-            games: allGames
-        })
-    })
-})
+// app.get("/games" , function(req, res){
+//     Games.find({}, (error, allGames) => {
+//         res.render("index.ejs" , {
+//             games: allGames
+//         })
+//     })
+// })
 
-// New
+// // New
 
-app.get("/games/new" , function(req, res){
-    res.render("new.ejs")
-})
+// app.get("/games/new" , function(req, res){
+//     res.render("new.ejs")
+// })
 
-// Delete
+// // Delete
 
-app.delete("/games/:id", function (req, res){
-    Games.findByIdAndRemove(req.params.id, function (err, data) {
-        res.redirect("/games")
-    })
-})
+// app.delete("/games/:id", function (req, res){
+//     Games.findByIdAndRemove(req.params.id, function (err, data) {
+//         res.redirect("/games")
+//     })
+// })
 
-// Update
+// // Update
 
-app.put("/games/:id" , function (req, res){
-    Games.findByIdAndUpdate(req.params.id, req.body, {
-        new: true,
-    }, (error, updatedGame) => {
-        res.redirect(`/games/${req.params.id}`)
-    })
-})
+// app.put("/games/:id" , function (req, res){
+//     Games.findByIdAndUpdate(req.params.id, req.body, {
+//         new: true,
+//     }, (error, updatedGame) => {
+//         res.redirect(`/games/${req.params.id}`)
+//     })
+// })
 
-// Create
+// // Create
 
-app.post("/games" , function(req, res){
-    if (req.body.hasBeaten === "on") {
-        req.body.hasBeaten = true;
-    } else {
-        req.body.hasBeaten = false;
-    }
-    Games.create(req.body, function(error, createdGame){
-        res.redirect("/games")
-    })
-})
+// app.post("/games" , function(req, res){
+//     if (req.body.hasBeaten === "on") {
+//         req.body.hasBeaten = true;
+//     } else {
+//         req.body.hasBeaten = false;
+//     }
+//     Games.create(req.body, function(error, createdGame){
+//         res.redirect("/games")
+//     })
+// })
 
-// Edit
+// // Edit
 
-app.get("/games/:id/edit", function (req, res){
-    Games.findById(req.params.id, function (err, foundGame){
-        res.render("edit.ejs" , {
-            game: foundGame,
-        })
-    })
-})
+// app.get("/games/:id/edit", function (req, res){
+//     Games.findById(req.params.id, function (err, foundGame){
+//         res.render("edit.ejs" , {
+//             game: foundGame,
+//         })
+//     })
+// })
 
-// Show
+// // Show
 
-app.get("/games/:id", function (req, res){
-    Games.findById(req.params.id, function (err, foundGame){
-        res.render("show.ejs", {
-            game: foundGame,
-        })
-    })
-})
+// app.get("/games/:id", function (req, res){
+//     Games.findById(req.params.id, function (err, foundGame){
+//         res.render("show.ejs", {
+//             game: foundGame,
+//         })
+//     })
+// })
 // Listener
 
 app.listen(port, function(){
