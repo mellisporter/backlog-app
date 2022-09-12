@@ -35,6 +35,7 @@ header {
 
 .nav-links li a {
     transition: all 0.3s ease 0s ;
+    color: white;
 }
 
 .nav-links li a:hover {
@@ -82,8 +83,9 @@ body button a {
     flex-direction: row;
 } */
 
-
-.boxart {
-    max-height: 10px;
-    max-width: 10px;
+.gamecard {
+    height:auto;
+    width:auto;
+    background-color: pink;
+    margin: 10px;
 }
