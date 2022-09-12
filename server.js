@@ -27,15 +27,20 @@ app.use(express.static('public')); // can use public folder for CSS
 
 // CONTROLLERS
 
-// SEED
+// GAME SEED
+// CONSOLE SEED
 
 // Index
 
-app.get("/" , function(req, res){
+app.get("/games" , function(req, res){
     res.render("index.ejs")
 })
 
 // New
+
+app.get("/games/new" , function(req, res){
+    res.render("new.ejs")
+})
 
 // Delete
 
