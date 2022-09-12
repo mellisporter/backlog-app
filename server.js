@@ -4,6 +4,8 @@ const app = express();
 require('dotenv').config();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const Games = require("./models/games")
+
 
 // DOTENV VARIABLES
 let port = process.env.port;
@@ -33,7 +35,11 @@ app.use(express.static('public')); // can use public folder for CSS
 // Index
 
 app.get("/games" , function(req, res){
-    res.render("index.ejs")
+    Games.find({}, (error, allGames) => {
+        res.render("index.ejs" , {
+            games: allGames
+        })
+    })
 })
 
 // New
@@ -48,11 +54,15 @@ app.get("/games/new" , function(req, res){
 
 // Create
 
+app.post("/games" , function(req, res){
+    Games.create(req.body, function(error, createdGame){
+        res.redirect("/games")
+    })
+})
+
 // Edit
 
 // Show
-
-app.get("")
 
 // Listener
 
