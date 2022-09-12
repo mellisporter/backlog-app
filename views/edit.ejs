@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="css">
+    <title>Backlog</title>
+</head>
+<nav>
+<h1>Backlog</h1>
+
+<h2>Sign In</h2>
+</nav>
+<body>
+<main>
+    <form action="/games/<%=game._id%>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%=game.title%>"><br>
+        Console: <input type="text" name="console" value="<%=game.console%>"><br>
+        Release Date: <input type="date" name="releaseDate" value="<%=game.releaseDate%>"><br>
+        Box Art URL: <input type="text" name="coverURL" value="<%=game.coverURL%>"><br>
+        Your Review: <textarea name="review" ><%=game.review%></textarea><br>
+        I've Beaten This Game: <input type="checkbox" name="hasBeaten"><br>
+        <input type="submit" value="Save Changes">
+    </form>
+</main>
+</div>
+</body>
+</html>

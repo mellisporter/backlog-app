@@ -58,6 +58,14 @@ app.delete("/games/:id", function (req, res){
 
 // Update
 
+app.put("/games/:id" , function (req, res){
+    Games.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+    }, (error, updatedGame) => {
+        res.redirect(`/games/${req.params.id}`)
+    })
+})
+
 // Create
 
 app.post("/games" , function(req, res){

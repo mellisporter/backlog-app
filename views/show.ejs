@@ -15,7 +15,7 @@
 <body>
 <div class="collection">
     <h2><%= game.title%></h2>
-    <h2><a href="/games/edit">Edit Game</a></h2>
+    <h2><a href="/games/<%=game._id%>/edit">Edit Game</a></h2>
     <ul>
     <img src="<%= game.coverURL %>" alt=""><br>
     Console: <%= game.console %>
