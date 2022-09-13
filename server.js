@@ -1,5 +1,8 @@
 // DECLARE REQUIREMENTS
 const express = require("express"); 
+// const morgan = require("morgan");
+const session = require("express-session");
+const passport = require("passport")
 const app = express();
 require('dotenv').config();
 const mongoose = require("mongoose");
@@ -26,6 +29,19 @@ app.use(express.urlencoded({ extended: false })); // gives access to req.body
 app.use(methodOverride('_method')); // allows us to use methods other than get and post
 app.use(express.static('public')); // can use public folder for CSS
 
+
+// SESSION MIDDLEWARE
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false, 
+    saveUninitialized: true,
+}));
+
+// PASSPORT MIDDLWARE
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // CONTROLLERS
 
