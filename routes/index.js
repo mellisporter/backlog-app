@@ -2,7 +2,9 @@ const router = require("express").Router();
 const passport = require('passport');
 
 router.get("/" , function (req, res){
-    res.render('index');
+    res.render("/views/index.ejs" , {
+        user: req.user
+    });
 });
 
 // Log In Route

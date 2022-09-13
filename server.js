@@ -56,8 +56,27 @@ app.use('/games', gamesController);
 
 
 app.get("/" , function (req, res){
-    res.render('index.ejs')
+    res.render('index.ejs' , {
+        user: req.user
+
+    })
 })
+
+// Log In Route
+app.get("/auth/google" , passport.authenticate('google' , {
+    scope: ['profile' , 'email']
+}));
+
+// Callback Route
+app.get('/oauth2callback', passport.authenticate('google', {
+    successRedirect: "/games",
+    failureRedirect: "/"
+}))
+// LogOut Route
+app.get("/logout" , function(req,res){
+    req.logOut(); // destroy the login session from the session storage
+    res.redirect("/") // send the user back to the homepage
+});
 
 // GAME SEED
 // CONSOLE SEED

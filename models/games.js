@@ -14,7 +14,7 @@ const gameSchema = new Schema({
 // }
 );
 
-const userSchema = new Schema({
+const gamerSchema = new Schema({
     name: String,
     email: String,
     avatarURL: String,
@@ -24,7 +24,7 @@ const userSchema = new Schema({
 })
 
 const Game = mongoose.model('Game', gameSchema);
-const User = mongoose.model('User', userSchema);
+const Gamer = mongoose.model('User', gamerSchema);
 
 module.exports = Game;
 // trying to export a User seperately broke my crud functionality, so commenting out for now.

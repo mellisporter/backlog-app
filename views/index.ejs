@@ -8,5 +8,10 @@
 </head>
 <body>
 Start adding to your collection <a href="/games">here.</a>
+<% if (user) { %>
+<a href="/logout">Log Out</a>
+<% } else { %>
+    <a href="/auth/google">Login With Google</a>
+ <% } %>
 </body>
 </html>
