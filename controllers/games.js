@@ -7,7 +7,8 @@ const Games = require("../models/games")
 router.get("/" , function(req, res){
     Games.find({}, (error, allGames) => {
         res.render("games/index.ejs" , {
-            games: allGames
+            games: allGames,
+            user: req.user
         })
     })
 })
@@ -15,7 +16,9 @@ router.get("/" , function(req, res){
 // New
 
 router.get("/new" , function(req, res){
-    res.render("games/new.ejs")
+    res.render("games/new.ejs" , {
+        user: req.user
+    })
 })
 
 // Delete
@@ -55,6 +58,7 @@ router.get("/:id/edit", function (req, res){
     Games.findById(req.params.id, function (err, foundGame){
         res.render("games/edit.ejs" , {
             game: foundGame,
+            user: req.user
         })
     })
 })
@@ -65,6 +69,7 @@ router.get("/:id", function (req, res){
     Games.findById(req.params.id, function (err, foundGame){
         res.render("games/show.ejs", {
             game: foundGame,
+            user: req.user
         })
     })
 })

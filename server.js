@@ -73,10 +73,14 @@ app.get('/oauth2callback', passport.authenticate('google', {
     failureRedirect: "/"
 }))
 // LogOut Route
-app.get("/logout" , function(req,res){
-    req.logOut(); // destroy the login session from the session storage
-    res.redirect("/") // send the user back to the homepage
-});
+app.get('/logout', function(req, res, next) {
+    req.logout(function(err) {
+      if (err) { 
+        return next(err); 
+        }
+      res.redirect('/');
+    });
+  });
 
 // GAME SEED
 // CONSOLE SEED

@@ -13,4 +13,9 @@
             </ul>
            
         </nav>
-        <a href="" class="cta"><button>Sign Up</button></a>
+        <% if (user) { %>
+            <a href="/logout" class="cta"><button>Log Out</button></a>
+        <% } else { %> 
+            <a href="/auth/google" class="cta"><button>Sign Up</button></a>
+       <% } %>
+       
