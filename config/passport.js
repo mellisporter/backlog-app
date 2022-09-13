@@ -19,7 +19,7 @@ passport.use(new GoogleStrategy({
         if (user) {
             return cb(null, user)
         } else {
-            // student doesn't exist, create them instead
+            // user doesn't exist, create them instead
             const newUser = new User({
                 name: profile.displayName,
                 email: profile.emails[0].value,

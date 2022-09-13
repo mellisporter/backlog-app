@@ -7,7 +7,8 @@ const app = express();
 require('dotenv').config();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-const Games = require("./models/games")
+const Games = require("./models/games");
+// const Users = require("./models/games");
 const gamesController = require('./controllers/games.js');
 
 // DOTENV VARIABLES
@@ -39,7 +40,7 @@ app.use(express.static('public')); // can use public folder for CSS
 // SESSION MIDDLEWARE
 
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "process.env.SESSION_SECRET",
     resave: false, 
     saveUninitialized: true,
 }));

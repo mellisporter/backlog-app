@@ -8,9 +8,11 @@ const gameSchema = new Schema({
     coverURL: String,
     review: String,
     hasBeaten: Boolean
-}, {
-    timestamps: true
-});
+}, 
+// {
+//     timestamps: true
+// }
+);
 
 const userSchema = new Schema({
     name: String,
@@ -22,5 +24,8 @@ const userSchema = new Schema({
 })
 
 const Game = mongoose.model('Game', gameSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = Game;
+// trying to export a User seperately broke my crud functionality, so commenting out for now.
+// module.exports = User;
