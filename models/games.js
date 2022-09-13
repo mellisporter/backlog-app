@@ -1,15 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    name: String,
-    email: String,
-    avatarURL: String,
-    googleId: String,
-    games: [gameSchema],
-    googleId: String,
-})
-
 const gameSchema = new Schema({
 	title: String,
 	console: String,
@@ -20,6 +11,15 @@ const gameSchema = new Schema({
 }, {
     timestamps: true
 });
+
+const userSchema = new Schema({
+    name: String,
+    email: String,
+    avatarURL: String,
+    googleId: String,
+    games: [gameSchema],
+    googleId: String,
+})
 
 const Game = mongoose.model('Game', gameSchema);
 
