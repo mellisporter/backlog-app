@@ -14,6 +14,12 @@ const gamesController = require('./controllers/games.js');
 let port = process.env.port;
 let DATABASE_URI= process.env.DATABASE_URI;
 
+// connect to mongodb with mongoose by running the code inside these files
+// require("./config/database");
+
+// initialize oauth process for login requests by running the code
+require('./config/passport');
+
 // DATABASE CONFIGURATION
 
 mongoose.connect(DATABASE_URI);
