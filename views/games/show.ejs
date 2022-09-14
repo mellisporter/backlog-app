@@ -10,16 +10,29 @@
 
 </header>
 <div class="collection">
-    <h2><%= game.title%></h2>
-    <h2><a href="/games/<%=game._id%>/edit">Edit Game</a></h2>
-    <ul>
-    <img src="<%= game.coverURL %>" alt=""><br>
-    Console: <%= game.console %>
-    Release Date: <%= game.releaseDate %>
-    Review: <%= game.review %>
-    Beaten?: <%= game.hasBeaten %>
-    </ul>
-    <a href="/games">Back to Collection</a>
+    <div class="showbar">
+        <h2><%= game.title%></h2><a href="/games/<%=game._id%>/edit"><button>Edit Game</button></a>
+
+    </div>
+    <div class="game-show">
+        <ul>
+            <div class="col s12 m2">
+                <p class="z-depth-5"><img src="<%= game.coverURL %>" class="show-cover" alt=""></p>
+              </div>
+        <br>
+        <P>
+        Console: <%= game.console %> <br>
+        Release Date: <%= game.releaseDate %> <br>
+        Review: <%= game.review %> <br>
+        Completed: <%= game.hasBeaten %> <br>
+    
+        </P>
+        
+        </ul>
+
+    </div>
+    
+    <a href="/games" class="return"><button>Return to Collection</button></a>
 </div>
 </body>
 </html>

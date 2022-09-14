@@ -55,11 +55,19 @@ router.put("/:id" , function (req, res){
 // Create
 
 router.post("/" , function(req, res){
-    if (req.body.hasBeaten === "on") {
+    if (req.body.hasBeaten === "checked") {
         req.body.hasBeaten = true;
     } else {
         req.body.hasBeaten = false;
     }
+    //    // res.send('received')
+    //    if (req.body.shipIsBroken === 'on') {
+	// 	//if checked, req.body.completed is set to 'on'
+	// 	req.body.shipIsBroken = true;
+	// } else {
+	// 	//if not checked, req.body.completed is undefined
+	// 	req.body.shipIsBroken = false;
+	// }
     Games.create(req.body, function(error, createdGame){
         res.redirect("/games")
     })

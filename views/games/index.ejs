@@ -13,12 +13,14 @@
         <h2>Sign In</h2> -->
     </header>
     <main>
-
+        
     <div class="welcome">
-        <h2>Welcome Back! Here's your collection.</h2>
+        <h3>Welcome Back! Here's your collection.</h3>
     <a href="/games/new"><button>Add Game</button></a>
     </div>
+    
     <div class="collection"></div>
+    <h5>Completed Games</h5>
     <ul>
     <% for (let i = 0; i < games.length; i++) { %>
         <div class="gamecard">
@@ -40,6 +42,8 @@
 </div>
     <% } %> 
     </ul>
+   
+    <h5>Up Next</h5>
 
 </div>
 </main>
