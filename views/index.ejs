@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backlog</title>
+    <%- include('./partials/head.ejs')%>
 </head>
 <body>
-Start adding to your collection <a href="/games">here.</a>
-<% if (user) { %>
-<a href="/logout">Log Out</a>
-<% } else { %>
-    <a href="/auth/google">Login With Google</a>
- <% } %>
- <style>
-    /* body {
-        background-image: url('https://images.unsplash.com/photo-1661927517192-8a1f7645fb33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    <header>
+        <%- include('./partials/header.ejs')%>
+    </header>
+ <div class="splash">
+    <h3>Take control of your games.</h3>
+    <p class="get-started">You can never have too many games. With Backlog, you will be able to track your collection. Sign Up to get started. </p>
+    <br><a href="/auth/google"><button class="splash-btn">Get Started</button></a>
+ </div>
+
+ 
+</body>
+<style>
+    body {
+        background-image: url('https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGdhbWluZyUyMGNvbnRyb2xsZXJ8ZW58MHx8MHx8&w=1000&q=80');
         background-repeat: no-repeat;
         background-size: cover;
-    } */
+        min-height: 100%;
+        display: block;
+    }
  </style>
-</body>
 </html>

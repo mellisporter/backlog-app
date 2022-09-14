@@ -55,11 +55,11 @@ router.put("/:id" , function (req, res){
 // Create
 
 router.post("/" , function(req, res){
-    if (req.body.hasBeaten === "checked") {
-        req.body.hasBeaten = true;
-    } else {
-        req.body.hasBeaten = false;
-    }
+    // if (req.body.hasCompleted === "Yes") {
+    //     req.body.hasCompleted = "Yes"
+    // } else {
+    //     req.body.hasCompleted = "No";
+    // }
     //    // res.send('received')
     //    if (req.body.shipIsBroken === 'on') {
 	// 	//if checked, req.body.completed is set to 'on'

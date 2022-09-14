@@ -52,12 +52,12 @@ h1, li, a, button {
 }
 
 ul li a:hover {
-    color: #008ba9
+    color: #9151c9;
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: rgba(145, 81, 201, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(145,81,201, 0.8);
 }
 
 footer {
@@ -98,12 +98,16 @@ body button a {
 .gamecard {
     height:auto;
     width:auto;
-    background-color: pink;
+    background-color: lightgray;
     margin: 10px;
 }
 
+.show-cover {
+    max-height: 400px;
+}
+
 #cover {
-    max-height: 200px;
+    max-height: 250px;
 }
 
 ul {
@@ -133,4 +137,51 @@ ul {
 
 .z-depth-5 {
     text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    margin-top: 1opx;
+}
+
+footer > a {
+    color: white;
+}
+.return {
+    text-align: center;
+    margin: 5px;
+}
+.delete-edit {
+    display: flex;
+    flex-direction: row;
+}
+
+.splash {
+    width: 50%;
+    font-family: 'Bowlby One SC', cursive;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 100px;
+
+}
+
+.get-started {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: large;
+}
+
+.splash-btn {
+    background-color: black;
+}
+
+.brand-logo {
+    margin-left: 12px;
 }

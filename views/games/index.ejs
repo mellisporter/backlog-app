@@ -19,8 +19,7 @@
     <a href="/games/new"><button>Add Game</button></a>
     </div>
     
-    <div class="collection"></div>
-    <h5>Completed Games</h5>
+    <h5>All Games</h5>
     <ul>
     <% for (let i = 0; i < games.length; i++) { %>
         <div class="gamecard">
@@ -31,21 +30,20 @@
         <a href="/games/<%=games[i]._id%>" class="boxart"><img src="<%=games[i].coverURL%>" id="cover" alt=""></a>
     </div>
     <br>
-    <form action="/games/<%=games[i]._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE">
-    </form>
-    <form action="">
-        <a href="/games/<%=games[i].id%>/edit">Edit Game</a>
-    </form>
+    <div class="delete-edit">
+        <form action="/games/<%=games[i]._id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE">
+        </form> 
+        <a href="/games/<%=games[i].id%>/edit"><input type="submit" value="EDIT"></a>
+
+    </div>
+   
    
 </li>
 </div>
     <% } %> 
     </ul>
-   
-    <h5>Up Next</h5>
 
-</div>
 </main>
 <!-- <footer>
     Color Themes Here
