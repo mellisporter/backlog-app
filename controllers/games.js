@@ -2,6 +2,19 @@ const express = require("express");
 const router = express.Router();
 const Games = require("../models/games")
 
+const gameSeed = require("../models/gameSeed");
+
+// SEED ROUTE
+
+router.get("/seed" , function (req, res){
+    Games.deleteMany({} , (error, allGames) => {
+    })
+
+    Games.create(gameSeed, (error, data) => {
+        res.redirect("/games")
+    })
+})
+
 // Index
 
 router.get("/" , function(req, res){
