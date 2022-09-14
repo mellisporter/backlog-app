@@ -89,3 +89,11 @@ body button a {
     background-color: pink;
     margin: 10px;
 }
+
+#cover {
+    max-height: 200px;
+}
+
+ul {
+    display: flex;
+}

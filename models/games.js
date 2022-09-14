@@ -20,7 +20,6 @@ const gamerSchema = new Schema({
     avatarURL: String,
     googleId: String,
     games: [gameSchema],
-    googleId: String,
 })
 
 const Game = mongoose.model('Game', gameSchema);

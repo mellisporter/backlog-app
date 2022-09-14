@@ -26,7 +26,7 @@
 <li>
     <a href="/games/<%=games[i]._id%>"><%= games[i].title %></a><br>
     <div class="art">
-        <a href="/games/<%=games[i]._id%>" class="boxart"><img src="<%=games[i].coverURL%>" alt=""></a>
+        <a href="/games/<%=games[i]._id%>" class="boxart"><img src="<%=games[i].coverURL%>" id="cover" alt=""></a>
     </div>
     <br>
     <form action="/games/<%=games[i]._id%>?_method=DELETE" method="POST">
