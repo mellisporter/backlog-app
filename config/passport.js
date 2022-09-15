@@ -6,7 +6,8 @@ const User = require("../models/games")
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK,
+    callbackURL: process.env.absoluteURI + "/auth/google/callback",
+    proxy: true ,
 }, function(accessToken, refreshToken, profile, cb){
     // a user has attempted a login
     // does this user already exist in our own database
