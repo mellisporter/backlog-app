@@ -30,6 +30,31 @@ gameSeed = [{
     review: "This game ruined gaming for me. It's player exploration, choice, and combat is unmatched. No game has felt good since.",
     hasCompleted: "No",
 },
+{
+    title: 'Breath of the Wild',
+    console: 'Nintendo Switch',
+    releaseDate: '2017-03-03',
+    coverURL: "https://m.media-amazon.com/images/I/81o8tnkKkkL._SY445_.jpg",
+    review: "Love the exploration and trust of the player.",
+    hasCompleted: "No",
+},
+{
+    title: 'Pokemon: Blue',
+    console: 'Game Boy',
+    releaseDate: '2022-02-25',
+    coverURL: "https://m.media-amazon.com/images/I/51GMKNSJ9GL.jpg",
+    review: "The very best, like no one ever was.",
+    hasCompleted: "Yes",
+},
+
+{
+    title: 'God of War II',
+    console: 'PS2',
+    releaseDate: '2022-02-25',
+    coverURL: "https://m.media-amazon.com/images/I/51-TFvrGFHL.jpg",
+    review: "Nobody does action quite like Kratos.",
+    hasCompleted: "No",
+},
 
 ];
 
