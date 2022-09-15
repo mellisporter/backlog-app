@@ -195,6 +195,7 @@ footer > a {
 .welcome {
    display: flex;
    flex-direction: column;
+   font-family: 'Fira Sans', sans-serif;
 }
 
 .card-btns {

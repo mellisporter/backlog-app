@@ -62,8 +62,6 @@ app.get("/" , function (req, res){
 
 app.use('/games', gamesController);
 
-
-
 // Log In Route
 app.get("/auth/google" , passport.authenticate('google' , {
     scope: ['profile' , 'email']
@@ -84,75 +82,6 @@ app.get('/logout', function(req, res, next) {
     });
   });
 
-// GAME SEED
-// CONSOLE SEED
-
-// // Index
-
-// app.get("/games" , function(req, res){
-//     Games.find({}, (error, allGames) => {
-//         res.render("index.ejs" , {
-//             games: allGames
-//         })
-//     })
-// })
-
-// // New
-
-// app.get("/games/new" , function(req, res){
-//     res.render("new.ejs")
-// })
-
-// // Delete
-
-// app.delete("/games/:id", function (req, res){
-//     Games.findByIdAndRemove(req.params.id, function (err, data) {
-//         res.redirect("/games")
-//     })
-// })
-
-// // Update
-
-// app.put("/games/:id" , function (req, res){
-//     Games.findByIdAndUpdate(req.params.id, req.body, {
-//         new: true,
-//     }, (error, updatedGame) => {
-//         res.redirect(`/games/${req.params.id}`)
-//     })
-// })
-
-// // Create
-
-// app.post("/games" , function(req, res){
-//     if (req.body.hasBeaten === "on") {
-//         req.body.hasBeaten = true;
-//     } else {
-//         req.body.hasBeaten = false;
-//     }
-//     Games.create(req.body, function(error, createdGame){
-//         res.redirect("/games")
-//     })
-// })
-
-// // Edit
-
-// app.get("/games/:id/edit", function (req, res){
-//     Games.findById(req.params.id, function (err, foundGame){
-//         res.render("edit.ejs" , {
-//             game: foundGame,
-//         })
-//     })
-// })
-
-// // Show
-
-// app.get("/games/:id", function (req, res){
-//     Games.findById(req.params.id, function (err, foundGame){
-//         res.render("show.ejs", {
-//             game: foundGame,
-//         })
-//     })
-// })
 // Listener
 
 app.listen(port || 3000, function(){

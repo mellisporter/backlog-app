@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const User = require("../models/games")
+const User = require("../models/users")
 
 // passport.use <---- we use this to plugin login options
 passport.use(new GoogleStrategy({
@@ -12,7 +12,7 @@ passport.use(new GoogleStrategy({
     // does this user already exist in our own database
     // if they don't we create them
     // let's check to see if the user exists
-    User.findOne({googleId: profile.id }, function(err, user){
+    User.findOne({'googleId': profile.id }, function(err, user){
         // if they don't we create them
         if(err) return cb(err);
         // if user exits in our db, log them in
@@ -37,7 +37,7 @@ passport.use(new GoogleStrategy({
 
 // passport.serializeUser <-- gets called one time when the user logs in
 passport.serializeUser(function(user, done){
-    done(null, user._id);
+    done(null, user.id);
 })
 // passport.deserializeUser <-- get called with each request - decodes the cookies and looks up the user in session torage
 // then decodes the cookie and looks up the user in session store creates req.user for us
