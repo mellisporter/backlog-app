@@ -12,7 +12,7 @@ const Games = require("./models/games");
 const gamesController = require('./controllers/games.js');
 
 // DOTENV VARIABLES
-let port = process.env.port;
+let port = process.env.port || 3000;
 let DATABASE_URI= process.env.DATABASE_URI;
 
 // connect to mongodb with mongoose by running the code inside these files
@@ -52,15 +52,17 @@ app.use(passport.session());
 
 // CONTROLLERS
 
-app.use('/games', gamesController);
-
-
 app.get("/" , function (req, res){
     res.render('index.ejs' , {
         user: req.user
 
     })
 })
+
+
+app.use('/games', gamesController);
+
+
 
 // Log In Route
 app.get("/auth/google" , passport.authenticate('google' , {
