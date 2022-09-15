@@ -185,3 +185,8 @@ footer > a {
 .brand-logo {
     margin-left: 12px;
 }
+
+.welcome {
+   display: flex;
+   flex-direction: column;
+}
