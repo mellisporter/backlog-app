@@ -1,7 +1,7 @@
 gameSeed = [{
     title: 'Super Mario Bros. 3',
     console: 'SNES',
-    releaseDate: '1988-10-23',
+    releaseYear: '1988',
     coverURL: "https://upload.wikimedia.org/wikipedia/en/a/a5/Super_Mario_Bros._3_coverart.png",
     review: "This is the best platformers I have played. A true classic that enhances the SMB formula.",
     hasCompleted: "Yes",
@@ -9,7 +9,7 @@ gameSeed = [{
 {
     title: 'Halo 2',
     console: 'Xbox',
-    releaseDate: '2004-11-09',
+    releaseYear: '2004',
     coverURL: "https://m.media-amazon.com/images/I/51AXK29H5BL.jpg",
     review: "An excellent campaign, but this game is at its best when you're playing with friends.",
     hasCompleted: "No",
@@ -17,7 +17,7 @@ gameSeed = [{
 {
     title: 'Final Fantasy IX',
     console: 'PSOne',
-    releaseDate: '2000-07-07',
+    releaseYear: '2000',
     coverURL: "https://upload.wikimedia.org/wikipedia/en/5/51/Ffixbox.jpg",
     review: "Excellent combat system that improves upon the formula of FFVII. The last great PSOne RPG",
     hasCompleted: "Yes",
@@ -25,7 +25,7 @@ gameSeed = [{
 {
     title: 'Elden Ring',
     console: 'PS5',
-    releaseDate: '2022-02-25',
+    releaseYear: '2022',
     coverURL: "https://cdn2.spong.com/pack/e/l/eldenring455877l/_-Elden-Ring-PS4-_.jpg",
     review: "This game ruined gaming for me. It's player exploration, choice, and combat is unmatched. No game has felt good since.",
     hasCompleted: "No",
@@ -33,7 +33,7 @@ gameSeed = [{
 {
     title: 'Breath of the Wild',
     console: 'Switch',
-    releaseDate: '2017-03-03',
+    releaseYear: '2017',
     coverURL: "https://m.media-amazon.com/images/I/81o8tnkKkkL._SY445_.jpg",
     review: "Love the exploration and trust of the player.",
     hasCompleted: "No",
@@ -41,7 +41,7 @@ gameSeed = [{
 {
     title: 'Pokemon: Blue',
     console: 'Game Boy',
-    releaseDate: '2022-02-25',
+    releaseYear: '2022',
     coverURL: "https://m.media-amazon.com/images/I/51GMKNSJ9GL.jpg",
     review: "The very best, like no one ever was.",
     hasCompleted: "Yes",
@@ -50,7 +50,7 @@ gameSeed = [{
 {
     title: 'God of War II',
     console: 'PS2',
-    releaseDate: '2022-02-25',
+    releaseYear: '2022',
     coverURL: "https://m.media-amazon.com/images/I/51-TFvrGFHL.jpg",
     review: "Nobody does action quite like Kratos.",
     hasCompleted: "No",

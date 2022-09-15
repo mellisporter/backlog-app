@@ -13,7 +13,7 @@
     <form action="/games/<%=game._id%>?_method=PUT" method="POST">
         Title: <input type="text" name="title" value="<%=game.title%>"><br>
         Console: <input type="text" name="console" value="<%=game.console%>"><br>
-        Release Date: <input type="date" name="releaseDate" value="<%=game.releaseDate%>"><br>
+        Release Year:  <input type="text" name="releaseYear" value="<%=game.releaseYear%>"><br>
         Box Art URL: <input type="text" name="coverURL" value="<%=game.coverURL%>"><br>
         Your Review: <textarea name="review" ><%=game.review%></textarea><br>
         Game Completed: <input type="text" name="hasCompleted" value="<%=game.hasCompleted%>"><br>

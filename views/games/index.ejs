@@ -48,10 +48,10 @@
         </div>
         <div class="card-content">
             
-          <p><%=games[i].title%> || <%=games[i].console%></p> <br> 
+          <p class="index-title"><%=games[i].title%> || <%=games[i].console%></p> <br> 
             <div class="card-btns">
         <a href="/games/<%=games[i].id%>/edit"class="btn-floating btn-small waves-effect waves-light black" id="ryan"><i class="material-icons">create</i></a> <form action="/games/<%=games[i]._id%>?_method=DELETE" method="POST">
-            <button class="btn-floating btn-small waves-effect waves-light black" id="ryan"><i class="material-icons">remove</i>Delete</button>
+            <button class="btn-floating btn-small waves-effect waves-light red" id="ryan"><i class="material-icons">remove</i>Delete</button>
         </form>  </div>
         </div>
       </div>
