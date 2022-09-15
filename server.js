@@ -153,6 +153,6 @@ app.get('/logout', function(req, res, next) {
 // })
 // Listener
 
-app.listen(port, function(){
+app.listen(port || function(){
     console.log("Ready to game on Port " + port)
 })
