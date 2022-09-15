@@ -12,7 +12,7 @@ const Games = require("./models/games");
 const gamesController = require('./controllers/games.js');
 
 // DOTENV VARIABLES
-let port = process.env.port || 3000;
+// let PORT = process.env.port || 3000;
 let DATABASE_URI= process.env.DATABASE_URI;
 
 // connect to mongodb with mongoose by running the code inside these files
@@ -85,6 +85,6 @@ app.get('/logout', function(req, res, next) {
 
 // Listener
 
-app.listen(port || 3000, function(){
-    console.log("Ready to game on Port " + port)
+app.listen(process.env.PORT || 3001, function(){
+    console.log("Ready to game on Port " + process.env.PORT)
 })
