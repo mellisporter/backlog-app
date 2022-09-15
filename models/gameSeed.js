@@ -32,7 +32,7 @@ gameSeed = [{
 },
 {
     title: 'Breath of the Wild',
-    console: 'Nintendo Switch',
+    console: 'Switch',
     releaseDate: '2017-03-03',
     coverURL: "https://m.media-amazon.com/images/I/81o8tnkKkkL._SY445_.jpg",
     review: "Love the exploration and trust of the player.",
