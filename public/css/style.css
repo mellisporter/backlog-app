@@ -95,19 +95,25 @@ body button a {
     flex-direction: row;
 } */
 
-.gamecard {
+#gamecard {
     height:auto;
     width:auto;
     background-color: lightgray;
     margin: 10px;
 }
 
+.card {
+    margin: 10px;
+}
+
+
 .show-cover {
     max-height: 400px;
 }
 
 #cover {
-    max-height: 250px;
+    max-width: 250px;
+    max-height: 300px;
 }
 
 ul {

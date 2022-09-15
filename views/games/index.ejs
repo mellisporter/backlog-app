@@ -20,7 +20,7 @@
     <h5>All Games</h5>
     <ul>
     <% for (let i = 0; i < games.length; i++) { %>
-        <div class="gamecard">
+        <!-- <div class="gamecard">
 
 <li>
     <a href="/games/<%=games[i]._id%>"><%= games[i].title %></a><br>
@@ -38,7 +38,20 @@
    
    
 </li>
-</div>
+</div> -->
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+            <a href="/games/<%=games[i]._id%>" class="boxart"><img src="<%=games[i].coverURL%>" id="cover" alt=""></a>
+          <span class="card-title"></span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. </p>
+        </div>
+      </div>
+    </div>
+  </div>
     <% } %> 
     </ul>
     <!-- action button bottom of screen -->
