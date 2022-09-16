@@ -9,11 +9,11 @@
 
 ## Description
 
-If you have been purchasing video games over the years abd want to keep track of your collection virtually, Backlog is the app to use!
+If you have been purchasing video games over the years and want to keep track of your collection virtually, Backlog is the app to use!
 
 Backlog is a fully functioning CRUD application that allows users to view their games, add new games to their collection, edit games, as well as delete games.
 
-Users can register for Backlog with their Google Account to store their data (coming soon!)
+Users can register for Backlog with their Google Account.
 
 ## Technologies Used
 
