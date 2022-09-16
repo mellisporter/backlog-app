@@ -13,7 +13,7 @@ If you have been purchasing video games over the years and want to keep track of
 
 Backlog is a fully functioning CRUD application that allows users to view their games, add new games to their collection, edit games, as well as delete games.
 
-Users can register for Backlog with their Google Account to store their data (coming soon!)
+Users can register for Backlog with their Google Account.
 
 ## Technologies Used
 
@@ -52,5 +52,8 @@ Get started using Backlog with Heroku.
 ## About the Developer
 
 I am currently a student in General Assembly's Software Engineering Immersive Program. Thank you for checking out my second web application! Follow my GitHub to see my future projects.
+<<<<<<< HEAD
 
 test
+=======
+>>>>>>> b6203b77a8d372f13e08feb1b5d606892e31bdb5
