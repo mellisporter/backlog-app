@@ -60,6 +60,20 @@ app.get("/" , function (req, res){
     })
 })
 
+app.get("/about" , function (req, res){
+    res.render('about.ejs' , {
+        user: req.user
+
+    })
+})
+
+app.get("/support" , function (req, res){
+    res.render('about.ejs', {
+        user: req.user
+
+    })
+})
+
 
 app.use('/games', gamesController);
 
