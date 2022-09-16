@@ -52,8 +52,3 @@ Get started using Backlog with Heroku.
 ## About the Developer
 
 I am currently a student in General Assembly's Software Engineering Immersive Program. Thank you for checking out my second web application! Follow my GitHub to see my future projects.
-<<<<<<< HEAD
-
-test
-=======
->>>>>>> b6203b77a8d372f13e08feb1b5d606892e31bdb5
