@@ -217,3 +217,20 @@ footer > a {
 .index-title {
     text-align: center;
 }
+
+.page-footer {
+    background-color: black;
+}
+
+.row {
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+}
+
+.footer-logo {
+    height: 40px;
+    width: 40px;
+}
