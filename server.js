@@ -102,6 +102,6 @@ app.get('/logout', function(req, res, next) {
 
 // Listener
 
-app.listen(PORT, function(){
+app.listen(PORT | 3000, function(){
     console.log("Listening on Port " + PORT)
 })
