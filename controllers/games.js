@@ -4,6 +4,34 @@ const Games = require("../models/games")
 
 const gameSeed = require("../models/gameSeed");
 
+const session = require("express-session");
+const passport = require("passport")
+const app = express();
+require('dotenv').config();
+const mongoose = require("mongoose");
+const methodOverride = require("method-override");
+
+// MIDDLEWARE
+
+router.use(express.urlencoded({ extended: false })); // gives access to req.body
+router.use(methodOverride('_method')); // allows us to use methods other than get and post
+router.use(express.static('public')); // can use public folder for CSS
+router.use(express.json());
+
+
+// SESSION MIDDLEWARE
+
+router.use(session({
+    secret: "process.env.SESSION_SECRET",
+    resave: false, 
+    saveUninitialized: true,
+}));
+
+// PASSPORT MIDDLWARE
+
+router.use(passport.initialize());
+router.use(passport.session());
+
 // SEED ROUTE
 
 router.get("/seed" , function (req, res){
@@ -19,10 +47,15 @@ router.get("/seed" , function (req, res){
 
 router.get("/" , function(req, res){
     Games.find({}, (error, allGames) => {
+        if (req.user) {
         res.render("games/index.ejs" , {
             games: allGames,
-            user: req.user
+            user: req.user,
+
         })
+    } else {
+        res.redirect("/")
+    }
     })
 })
 
