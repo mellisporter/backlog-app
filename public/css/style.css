@@ -237,11 +237,13 @@ footer > a {
 footer {
     height: 6%;
     width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
     font-family: 'Fira Sans', sans-serif;
     font-size: medium;
+    
+}
+.page-footer {
+    justify-content: center;
+    align-items: center;
 }
 
 .icons {
