@@ -74,6 +74,9 @@ app.get("/support" , function (req, res){
     })
 })
 
+// Routes / Controllers
+const sessionsController = require('./controllers/sessions');
+app.use('/sessions', sessionsController);
 
 app.use('/games', gamesController);
 
